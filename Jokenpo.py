@@ -1,7 +1,7 @@
 
 import random
 
-'''
+''' Colocar emoji
 Papel :hand_with_fingers_splayed_light_skin_tone:
 Pedra :oncoming_fist_light_skin_tone:
 Tesoura :victory_hand_light_skin_tone:
@@ -33,24 +33,24 @@ for i in range(1, 4):
         '''Alguem ganhou'''
         if play == 'Pedra':
             if pc == 'Papel':
-                scorePC = scorePC + 1
+                scorePC += 1
                 print ('PC ganhou a {}º rodada' .format(i))
             else:
-                scorePlay = scorePlay + 1
+                scorePlay += 1
                 print ('Player ganhou a {}º rodada' .format(i))
         elif play == 'Papel':
             if pc == 'Tesoura':
-                scorePC = scorePC + 1
+                scorePC += 1
                 print ('PC ganhou a {}º rodada' .format(i))
             else:
-                scorePlay = scorePlay + 1
+                scorePlay +=  1
                 print ('Player ganhou a {}º rodada' .format(i))
         elif play == 'Tesoura':
             if pc == 'Pedra':
-                scorePC = scorePC + 1
+                scorePC += 1
                 print ('PC ganhou a {}º rodada' .format(i))
             else:
-                scorePlay = scorePlay + 1
+                scorePlay += 1
                 print ('Player ganhou a {}º rodada' .format(i))
         else:
             '''Informação Incorreta'''
