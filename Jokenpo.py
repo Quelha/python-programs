@@ -18,8 +18,8 @@ Papel
 Tesoura
 ''')
 
-scorePC = int(0)
-scorePlay = int(0)
+scorePC = 0
+scorePlay = 0
 
 for i in range(1, 4):
     print('-'*22)
