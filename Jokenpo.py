@@ -1,52 +1,41 @@
-
 import random
 
-''' Colocar emoji
-Papel :hand_with_fingers_splayed_light_skin_tone:
-Pedra :oncoming_fist_light_skin_tone:
-Tesoura :victory_hand_light_skin_tone:
-'''
-print('-'*22)
-print('PEDRA, PAPEL E TESOURA')
-print('-'*22)
+print('-'*32)
+print(' '*4,'PEDRA, PAPEL E TESOURA')
+print('-'*32)
 
-print('Vamos fazer uma melhor de três?\n')
-print('''Primeira jogada!
-
-Pedra
-Papel
-Tesoura
-''')
+print('Vamos fazer uma melhor de três?')
 
 scorePC = 0
 scorePlay = 0
 
 for i in range(1, 4):
-    print('-'*22)
-    play = input('{} JOGADA! PEDRA, PAPEL OU TESOURA? ' .format(i))
-    pc = random.choice(['Pedra', 'Papel', 'Tesoura'])
+    print(i)
+    print('-'*32)
+    play = input('{}{} RODADA!\nPEDRA, PAPEL OU TESOURA? ' .format(' '*10, i)).upper()
+    pc = random.choice(['PEDRA', 'PAPEL', 'TESOURA'])
 
-    print('\nJogador jogou: {}' .format(play))
-    print('PC jogou: {}' .format(pc))
+    print('\nJogador: {}' .format(play))
+    print('PC:{}{}' .format(' '*6,pc))
 
     if play != pc:
         '''Alguem ganhou'''
-        if play == 'Pedra':
-            if pc == 'Papel':
+        if play == 'PEDRA':
+            if pc == 'PAPEL':
                 scorePC += 1
                 print ('PC ganhou a {}º rodada' .format(i))
             else:
                 scorePlay += 1
                 print ('Player ganhou a {}º rodada' .format(i))
-        elif play == 'Papel':
-            if pc == 'Tesoura':
+        elif play == 'PAPEL':
+            if pc == 'TESOURA':
                 scorePC += 1
                 print ('PC ganhou a {}º rodada' .format(i))
             else:
                 scorePlay +=  1
                 print ('Player ganhou a {}º rodada' .format(i))
-        elif play == 'Tesoura':
-            if pc == 'Pedra':
+        elif play == 'TESOURA':
+            if pc == 'PEDRA':
                 scorePC += 1
                 print ('PC ganhou a {}º rodada' .format(i))
             else:
@@ -54,17 +43,19 @@ for i in range(1, 4):
                 print ('Player ganhou a {}º rodada' .format(i))
         else:
             '''Informação Incorreta'''
-            print('{}º JOGA ANULADA POR INFORMAÇÃO INCORRETA')
+            print('JOGA ANULADA | INFORMAÇÃO INCORRETA')
+            i = i - 1
+            print(i)
     else:
         '''Empate'''
         print('{}º Rodada deu Empate' .format(i))
     
 
-print('-'*22)
+print('-'*32)
 if scorePlay > scorePC:
-    print('PLAYER WIN')
+    print(' '*9,'PLAYER WIN')
 elif scorePlay < scorePC:
-    print('PC WIN')
+    print(' '*9,'PC WIN')
 else:
-    print('EMPATE')
-print('-'*22)
+    print(' '*9,'EMPATE')
+print('-'*32)
