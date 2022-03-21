@@ -1,4 +1,5 @@
 import random
+import time
 
 print('-'*32)
 print(' '*4,'PEDRA, PAPEL E TESOURA')
@@ -10,13 +11,21 @@ scorePC = 0
 scorePlay = 0
 
 for i in range(1, 4):
-    print(i)
     print('-'*32)
     play = input('{}{} RODADA!\nPEDRA, PAPEL OU TESOURA? ' .format(' '*10, i)).upper()
+    print('JO')
+    time.sleep(1)
+    print('KEN')
+    time.sleep(1)
+    print('PO')
+    time.sleep(1)
+
     pc = random.choice(['PEDRA', 'PAPEL', 'TESOURA'])
 
     print('\nJogador: {}' .format(play))
+    time.sleep(1)
     print('PC:{}{}' .format(' '*6,pc))
+    time.sleep(0.5)
 
     if play != pc:
         '''Alguem ganhou'''
@@ -44,8 +53,6 @@ for i in range(1, 4):
         else:
             '''Informação Incorreta'''
             print('JOGA ANULADA | INFORMAÇÃO INCORRETA')
-            i = i - 1
-            print(i)
     else:
         '''Empate'''
         print('{}º Rodada deu Empate' .format(i))
