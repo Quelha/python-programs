@@ -25,3 +25,5 @@ print(nt+nt2)
 nt = nt.replace(dict[mesAnt],dict[mes]) + nt2.replace(nt2[0:10],data).replace(nt2[25:34], valor)
 
 print(nt)
+
+x = input('FIM')
