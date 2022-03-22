@@ -9,10 +9,14 @@ print('Vamos fazer uma melhor de três?')
 
 scorePC = 0
 scorePlay = 0
+i = 0
 
-for i in range(1, 4):
+while scorePC != 2 or scorePlay != 2:
+    print(f'PC: {scorePC}')
+    print(f'Play: {scorePlay}')
+    i += 1
     print('-'*32)
-    play = input('{}{} RODADA!\nPEDRA, PAPEL OU TESOURA? ' .format(' '*10, i)).upper()
+    play = input(f'{i:>11} RODADA!\nPEDRA, PAPEL OU TESOURA?').upper()
     print('JO')
     time.sleep(1)
     print('KEN')
