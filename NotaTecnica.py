@@ -28,10 +28,6 @@ dict = {
     11: 'Novembro', 12: 'Dezembro'
 }
 
-'''MOSTRAR NT ANTERIOR'''
-print(nt+nt2)
-print(' ')
-
 '''SUBSTITUINDO E JUNTANDO OS DOIS TEXTOS'''
 nt = nt.replace(dict[mesAnt],dict[mes]) + nt2.replace(nt2[10:20],dataComum).replace(nt2[129:138],data0800).replace(nt2[99:109], valorComum).replace(nt2[219:227], valor0800).replace(dict[mesAnt],dict[mes])
 
