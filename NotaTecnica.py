@@ -1,10 +1,10 @@
 
 nt = """ASSUNTO:
-Trata esta nota da avaliação específica da prestação de serviços de TELEMAR NORTE LESTE S/A, disponibilizados através do Contrato 08/2018, para o mês de Janeiro/2022.\n\n"""
+Trata esta nota da avaliação específica da prestação de serviços de TELEMAR NORTE LESTE S/A, disponibilizados através do Contrato 08/2018, para o mês de Fevereiro/2022.\n\n"""
 nt2 = """FATOS:
-Em 17/01/2022 foi disponibilizada a fatura de telefonia fixa código 350 4329 no valor de R$ 11.051,48 (28190344) e no dia 20/01/2022 foi disponibilizada a fatura da telefonia 0800 código 350 5110, no valor de R$ 1.123,51 (28190786), competência Janeiro 2022.
-Foi inserido relatório BI com detalhes das ligações realizadas em Janeiro/2022, no processo de fiscalização mensal SEI-040161/003086/2021
- 
+Em 15/02/2022 foi disponibilizada a fatura de telefonia fixa código 350 4329 no valor de R$ 11.516,01 (29357128) e no dia 21/02/2022 foi disponibilizada a fatura da telefonia 0800 código 350 5110, no valor de R$ 1.938,90 (29357022), competência Fevereiro 2022.
+Foi inserido relatório BI com detalhes das ligações realizadas em Fevereiro/2022, no processo de fiscalização mensal SEI-040161/003086/2021
+
 CONCLUSÃO:
 A empresa atendeu satisfatoriamente aos parâmetros técnicos relativos à prestação de serviço de telefonia fixa, demonstrando ter capacidade técnica para prestar os serviços de telefonia comum e 0800 ao Rioprevidência."""
 
@@ -28,7 +28,7 @@ dict = {
 }
 
 '''SUBSTITUINDO E JUNTANDO OS DOIS TEXTOS'''
-nt = nt.replace(dict[mesAnt],dict[mes]) + nt2.replace(nt2[10:20],dataComum).replace(nt2[129:138],data0800).replace(nt2[99:109], valorComum).replace(nt2[219:227], valor0800).replace(dict[mesAnt],dict[mes])
+nt = nt.replace(dict[mesAnt],'\033[1m' + dict[mes] + '\033[0m') + nt2.replace(nt2[10:20],dataComum).replace(nt2[129:139],data0800).replace(nt2[99:109], valorComum).replace(nt2[219:227], valor0800).replace(dict[mesAnt],dict[mes])
 
 print(nt)
 
