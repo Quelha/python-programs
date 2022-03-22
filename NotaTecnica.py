@@ -36,3 +36,5 @@ print(' ')
 nt = nt.replace(dict[mesAnt],dict[mes]) + nt2.replace(nt2[10:20],dataComum).replace(nt2[129:138],data0800).replace(nt2[99:109], valorComum).replace(nt2[219:227], valor0800).replace(dict[mesAnt],dict[mes])
 
 print(nt)
+
+x = input('FIM')
