@@ -11,7 +11,7 @@ scorePC = 0
 scorePlay = 0
 i = 0
 
-while scorePC != 2 or scorePlay != 2:
+while scorePC != 2 and scorePlay != 2:
     print(f'PC: {scorePC}')
     print(f'Play: {scorePlay}')
     i += 1
